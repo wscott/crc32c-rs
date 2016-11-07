@@ -54,6 +54,19 @@ typedef	uint64_t u64;
 #define	X86_CRC
 #endif
 
+#include <arpa/inet.h>
+#if !defined(__BYTE_ORDER) && defined(_BYTE_ORDER)
+#define __BYTE_ORDER _BYTE_ORDER
+#define __LITTLE_ENDIAN _LITTLE_ENDIAN
+#define __BIG_ENDIAN _BIG_ENDIAN
+#endif
+
+#if !defined(__BYTE_ORDER) && defined(BYTE_ORDER)
+#define __BYTE_ORDER BYTE_ORDER
+#define __LITTLE_ENDIAN LITTLE_ENDIAN
+#define __BIG_ENDIAN BIG_ENDIAN
+#endif
+
 #ifndef __BYTE_ORDER
 #error "help!"
 #endif
