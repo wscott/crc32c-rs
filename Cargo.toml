@@ -1,0 +1,11 @@
+[package]
+name = "crc32c"
+version = "0.1.0"
+authors = ["Wayne Scott <wscott@bitkeeper.com>"]
+build = "build.rs"
+
+[build-dependencies]
+gcc = "*"
+
+[dependencies]
+libc = "*"
